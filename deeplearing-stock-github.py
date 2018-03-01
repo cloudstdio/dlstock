@@ -150,7 +150,7 @@ class Deeplearing():
         basic_path = os.path.dirname(os.path.abspath(__file__))
         #定义存储模型的文件路径
         #os.path.join(basic_path, "stock_rnn_save.ckpt")表示在运行的python文件路径下保存，文件名为stock_rnn.ckpt，在我环境下运行总是提示“另一个程序正在使用此文件，进程无法访问”，换到其他路径就OK
-        model_save_path = "F:\\123\\save\\stock_rnn_save.ckpt"#os.path.join(basic_path, "stock_rnn_save.ckpt")
+        model_save_path = "/Users/cloudstdio/Documents/ai/stock_predict/stock_rnn_save.ckpt"#os.path.join(basic_path, "stock_rnn_save.ckpt")
         #定义训练集的文件路径，当前为运行的python文件路径下，文件名为train_data.csv
         train_csv_path = os.path.join(basic_path, "train_data.csv")
         #定义测试集的文件路径，当前为运行的python文件路径下，文件名为test_data.csv
@@ -309,7 +309,7 @@ class Deeplearing():
         #在linux下同样起作用
         basic_path = os.path.dirname(os.path.abspath(__file__))
         #定义存储模型的文件路径，当前为运行的python文件路径下，文件名为stock_rnn.ckpt
-        model_save_path = r"F:\\123\\save\\stock_rnn_save.ckpt"#os.path.join(basic_path, "stock_rnn.ckpt")
+        model_save_path = r"/Users/cloudstdio/Documents/ai/stock_predict/stock_lstm_rnn_save.ckpt"#os.path.join(basic_path, "stock_rnn.ckpt")
         #定义训练集的文件路径，当前为运行的python文件路径下，文件名为train_data.csv
         train_csv_path = os.path.join(basic_path, "train_data.csv")
         #定义测试集的文件路径，当前为运行的python文件路径下，文件名为test_data.csv
@@ -450,16 +450,16 @@ if __name__ == "__main__":
     pass
     dl = Deeplearing()
 
-    ##  个股收益预测  ##
+    ##  个股收益预测  ## 15% low
     #dl.stock_lstm()
     ##  ============  ##
 
     ##  个股收益分类预测  ##
-    #dl.stock_lstm_softmax()
+    dl.stock_lstm_softmax()
     ##  ================  ##
 
     ##  处理原始数据  ##
-    get_stock_data().make_train_test_csv()
+    #get_stock_data().make_train_test_csv()
     ##  ===========   ##   
 
     
